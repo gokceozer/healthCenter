@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/mystyle.css" %}">
+  </head>
+  <body
+
+
+
+  <nav class="navbar navbar-light bg-light" id="bootstrap-overrides">
+    <a class="navbar-brand" href="#">
+      <img src="{% static "images/download.jpeg" %}" width="90" height="90" alt="">
+    </a>
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <li><a class="navbar-brand" href="#top"></a>Patients Page</li>
+        <li><a class="navbar-brand" href="{% url 'admin:index' %}">Admin</a></li>
+        <li><a class="navbar-brand" href="{% url 'first_app:form_name' %}">Register Patients</a></li>
+      </ul>
+
+    </div>
+</nav>
+
+
+
+
+    <div class="container">
+      {% block body_block %}
+
+      {% endblock %}
+
+    </div>
+
+  </body>
+</html>
